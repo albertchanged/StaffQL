@@ -1,2 +1,2 @@
-# Staffbook
-An employee directory powered by GraphQL, React JS, and React Router!
+# StaffQL
+A staff directory powered by GraphQL, MongoDB, React JS, and React Router!
