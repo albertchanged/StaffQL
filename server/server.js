@@ -8,7 +8,7 @@ const mongo = require('../mongo');
 
 const app = express();
 
-const MONGO_URI = `mongodb://${mongo.user}:${mongo.password}@ds117729.mlab.com:17729/lyricaldb`;
+const MONGO_URI = `mongodb://${mongo.user}:${mongo.password}@ds125255.mlab.com:25255/staff`;
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoLab URI');
 }
