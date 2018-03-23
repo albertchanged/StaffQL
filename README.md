@@ -25,13 +25,14 @@ After that, here are the steps to set up:
 4. Open the project in your favorite code editor
 5. Replace the mongo.user and mongo.password located in ```server/server.js``` with your own mLabs credentials
 6. Run ```npm run dev``` in your command line
-7. Navigate to localhost:4000 in your browser
+7. Navigate to ```localhost:4000``` in your browser
 8. Enjoy!
 
 ## Technologies Used ##
-GraphQL
-MongoDB
-React JS
-React Router
-Apollo Client
+* GraphQL
+* MongoDB
+* React JS
+* React Router
+* Apollo Client
+* Webpack / Babel
 
