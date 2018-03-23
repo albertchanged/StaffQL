@@ -16,12 +16,12 @@ class Form extends Component {
   }
   onSubmit(event) {
     event.preventDefault();
-    console.log(this.props);
     (this.props.addStaff && !this.props.editInfo) ?  
     this.props.addStaff(this.state.name, this.state.role, this.state.department)
     : this.props.editInfo(this.props.id, this.state.name, this.state.role, this.state.department);
   }
   render() {
+    console.log('In Form render', this.props);
     return (
       <div>
         <Link to="/">Cancel</Link>
@@ -30,17 +30,17 @@ class Form extends Component {
           <h5>Name</h5>
           <input 
             onChange={event => this.setState({ name: event.target.value })}
-            value={this.state.name}
+            defaultValue={(this.props.title) ? this.props.title : this.state.name}
           />
           <h5>Role</h5>
           <input 
             onChange={event => this.setState({ role: event.target.value })}
-            value={this.state.role}
+            defaultValue={(this.props.role) ? this.props.role : this.state.role}
           />
           <h5>Department</h5>
           <input 
             onChange={event => this.setState({ department: event.target.value })}
-            value={this.state.department}
+            defaultValue={(this.props.department) ? this.props.department : this.state.department}
           />
           <button onClick={this.onSubmit.bind(this)}>Submit</button>
         </form>
