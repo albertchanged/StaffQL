@@ -17,17 +17,6 @@ const StaffSchema = new Schema({
   }
 });
 
-// StaffSchema.statics.addRole = function(id, content) {
-//   const Role = mongoose.model('role');
-
-//   return this.findById(id)
-//     .then(staff => {
-//       const role = new Name({ content, staff })
-//       staff.role.push(role);
-//       return role.save();
-//     });
-// }
-
 StaffSchema.statics.findRole = function(id) {
   console.log('In findRole', id);
   return this.findById(id)

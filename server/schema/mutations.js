@@ -33,41 +33,14 @@ const mutation = new GraphQLObjectType({
       resolve(parentValue, { id, title, role, department }) {
         return Staff.editStaffInfo(id, title, role, department);
       }
+    },
+    deleteStaff: {
+      type: StaffType,
+      args: { id: { type: GraphQLID } },
+      resolve(parentValue, { id }) {
+        return Staff.remove({ _id: id });
+      }
     }
-    // addRoleToStaff: {
-    //   type: StaffType,
-    //   args: {
-    //     content: { type: GraphQLString },
-    //     roleId: { type: GraphQLID }
-    //   },
-    //   resolve(parentValue, { content, roleId }) {
-    //     return Staff.addRole(roleId, content);
-    //   }
-    // },
-    // addDepartmentToStaff: {
-    //   type: StaffType,
-    //   args: {
-    //     content: { type: GraphQLString },
-    //     departmentId: { type: GraphQLID }
-    //   },
-    //   resolve(parentValue, { content, departmentId }) {
-    //     return Staff.addRole(departmentId, content);
-    //   }
-    // },
-    // likeLyric: {
-    //   type: LyricType,
-    //   args: { id: { type: GraphQLID } },
-    //   resolve(parentValue, { id }) {
-    //     return Lyric.like(id);
-    //   }
-    // },
-    // deleteSong: {
-    //   type: SongType,
-    //   args: { id: { type: GraphQLID } },
-    //   resolve(parentValue, { id }) {
-    //     return Song.remove({ _id: id });
-    //   }
-    // }
   }
 });
 
