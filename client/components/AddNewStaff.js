@@ -20,6 +20,7 @@ class AddNewStaff extends Component {
     return (
       <div>
         <h3>Add New Staff Member</h3>
+        <br />
         <Form addStaff={this.addStaff.bind(this)}/>
       </div>
     )

@@ -6,12 +6,6 @@ import { graphql } from 'react-apollo';
 import query from '../queries/fetchStaff';
 
 class EditStaff extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    }
-  }
   editInfo(id, name, role, department) {
     this.props.mutate({
       variables: {
@@ -25,8 +19,15 @@ class EditStaff extends Component {
   render() {
     return (
       <div>
-        <h3>Edit Staff Information</h3>
-        <Form id={this.props.routeParams.id} editInfo={this.editInfo.bind(this)} />
+        <h4 className="editStaffTitle">Edit Staff Information for <span className="headerStaff">{this.props.location.state.name}</span></h4>
+        <br />
+        <Form 
+          id={this.props.routeParams.id} 
+          title={this.props.location.state.name}
+          role={this.props.location.state.role}
+          department={this.props.location.state.department}
+          editInfo={this.editInfo.bind(this)} 
+        />
       </div>
     )
   }

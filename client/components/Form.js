@@ -14,6 +14,15 @@ class Form extends Component {
       name: ''
     }
   }
+  componentWillMount() {
+    if (this.props.title && this.props.role && this.props.department) {
+      this.setState({
+        name: this.props.title,
+        role: this.props.role,
+        department: this.props.department
+      });
+    }
+  }
   onSubmit(event) {
     event.preventDefault();
     (this.props.addStaff && !this.props.editInfo) ?  
@@ -21,31 +30,37 @@ class Form extends Component {
     : this.props.editInfo(this.props.id, this.state.name, this.state.role, this.state.department);
   }
   render() {
-    console.log('In Form render', this.props);
     return (
       <div>
-        <Link to="/">Cancel</Link>
-        <h3>Information for someone</h3>
+        {/* <Link className="cancelButton" to="/">Cancel</Link> */}
         <form onSubmit={this.onSubmit.bind(this)}>
-          <h5>Name</h5>
-          <input 
+          <h5 className="tealish"><strong>Name</strong></h5>
+          <input
+            className="inputStyle"
+            placeholder="Winklevoss Twins"
             onChange={event => this.setState({ name: event.target.value })}
-            defaultValue={(this.props.title) ? this.props.title : this.state.name}
+            defaultValue={this.state.name}
           />
-          <h5>Role</h5>
+          <h5 className="tealish"><strong>Role</strong></h5>
           <input 
+            className="inputStyle"
+            placeholder="Whiners"
             onChange={event => this.setState({ role: event.target.value })}
-            defaultValue={(this.props.role) ? this.props.role : this.state.role}
+            defaultValue={this.state.role}
           />
-          <h5>Department</h5>
+          <h5 className="tealish"><strong>Department</strong></h5>
           <input 
+            className="inputStyle"
+            placeholder="Harvard Business"
             onChange={event => this.setState({ department: event.target.value })}
-            defaultValue={(this.props.department) ? this.props.department : this.state.department}
+            defaultValue={this.state.department}
           />
-          <button onClick={this.onSubmit.bind(this)}>Submit</button>
+          <br /><br />
+          <button className="submitButton" onClick={this.onSubmit.bind(this)}>Submit</button>
+          <Link to="/"><button className="cancelButton">Cancel</button></Link>
         </form>
       </div>
-    )
+    );
   }
 }
 

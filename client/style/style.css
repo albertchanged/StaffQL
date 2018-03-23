@@ -1,0 +1,89 @@
+.headerTitle {
+  text-align: center;
+}
+.headerStaff {
+  color: #4A6EBB;
+}
+input {
+  color: #424242;
+}
+.inputStyle {
+  font-size: 20px !important;
+}
+::placeholder {
+  color: #BDBDBD;
+  /* font-size: 20px; */
+}
+.editStaffTitle {
+  margin-top: 3%;
+}
+.tealish {
+  color: #4A6EBB;
+  background-color: white;
+}
+.submitButton {
+  border: 2px solid #4A6EBB;
+  background-color: #4A6EBB;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left: 1.5%;
+  padding-right: 1.6%;
+  color: white;
+}
+.submitButton:hover, .submitButton:focus {
+  background-color: #4A6EBB;
+}
+.staffContainer {
+  background-color: #E9E9E9;
+  padding-left: 3%;
+  padding-top: 0.5%;
+  padding-bottom: 2%;
+}
+.editInfoButton, .deleteButton {
+  float: right;
+  padding-right: 3%;
+  align-items: center;
+}
+.editInfoButton {
+  margin-top: -115px;
+  margin-left: -25px;
+  font-size: 25px;
+}
+.editInfoButton:hover, .editInfoButton:focus {
+  text-decoration: underline;
+  background-color: none;
+}
+.deleteButton {
+  margin-top: -80px;
+  margin-left: -25px;
+  font-size: 35px;
+}
+.cancelButton {
+  /* float: right; */
+  margin-left: 3%;
+  font-size: 20px;
+  border: 2px solid #A4A4A4;
+  border-radius: 5px;
+  padding-left: 1.5%;
+  padding-right: 1.6%;
+  color: #4A6EBB;
+}
+.cancelButton:hover, .cancelButton:focus {
+  /* text-decoration: underline; */
+  background-color: white;
+}
+.searchBar {
+  font-size: 17.5px;
+}
+.material-icons {
+  cursor: pointer;
+  margin-left: 5px;
+}
+.addNewStaff {
+  margin-bottom: 2%;
+  text-decoration: none;
+  color: #4A6EBB;
+}
+.addNewStaff:hover, .addNewStaff:focus {
+  text-decoration: underline;
+}
