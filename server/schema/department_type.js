@@ -19,7 +19,7 @@ const DepartmentType = new GraphQLObjectType({
       resolve(parentValue) {
         return Department.findById(parentValue).populate('staff')
           .then(department => {
-            return Department.staff
+            return Department.staff;
           });
       }
     }

@@ -17,20 +17,6 @@ const StaffSchema = new Schema({
   }
 });
 
-StaffSchema.statics.findRole = function(id) {
-  console.log('In findRole', id);
-  return this.findById(id)
-    .populate('role')
-    .then(staff => staff.role);
-}
-
-StaffSchema.statics.findDepartment = function(id) {
-  console.log('In findDepartment', id);
-  return this.findById(id)
-    .populate('department')
-    .then(staff => staff.department);
-}
-
 StaffSchema.statics.editStaffInfo = function(id, title, role, department) {
   const Staff = mongoose.model('staff');
   return Staff.findById(id)

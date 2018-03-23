@@ -11,7 +11,6 @@ const StaffType = require('./staff_type');
 const RoleType = require('./role_type');
 const DepartmentType = require('./department_type');
 
-
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: () => ({

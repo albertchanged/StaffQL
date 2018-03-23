@@ -19,7 +19,7 @@ const RoleType = new GraphQLObjectType({
       resolve(parentValue) {
         return Role.findById(parentValue).populate('staff')
           .then(role => {
-            return role.staff
+            return role.staff;
           });
       }
     }

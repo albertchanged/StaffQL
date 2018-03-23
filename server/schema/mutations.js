@@ -19,7 +19,7 @@ const mutation = new GraphQLObjectType({
         department: { type: GraphQLString }
       },
       resolve(parentValue, { title, role, department }) {
-        return (new Staff({ title, role, department })).save()
+        return (new Staff({ title, role, department })).save();
       }
     },
     editInfo: {

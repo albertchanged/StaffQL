@@ -9,20 +9,8 @@ const StaffType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     title: { type: GraphQLString },
-    role: {
-      type: GraphQLString,
-      // resolve(parentValue) {
-      //   console.log('In role', parentValue);
-      //   return Staff.findRole(parentValue.id);
-      // }
-    },
-    department: {
-      type: GraphQLString,
-      // resolve(parentValue) {
-      //   console.log('In department', parentValue);
-      //   return Staff.findDepartment(parentValue.id);
-      // }
-    }
+    role: { type: GraphQLString },
+    department: { type: GraphQLString }
   })
 });
 

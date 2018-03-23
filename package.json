@@ -1,10 +1,9 @@
 {
   "name": "staffql",
   "version": "1.0.0",
-  "description": "A staff directory powered by GraphQL, MongoDB, React, and React Router",
+  "description": "A staff directory powered by GraphQL, MongoDB, React, and React Router!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js --ignore client"
   },
   "repository": {
@@ -19,7 +18,6 @@
   "homepage": "https://github.com/albertchanged/StaffQL#readme",
   "dependencies": {
     "apollo-client": "^0.8.1",
-    "axios": "^0.15.3",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
@@ -29,15 +27,12 @@
     "css-loader": "^0.26.1",
     "express": "^4.14.0",
     "express-graphql": "^0.6.1",
-    "express-session": "^1.15.0",
     "graphql": "^0.8.2",
     "graphql-tag": "^2.8.0",
     "html-webpack-plugin": "^2.26.0",
     "lodash": "^4.17.4",
     "mongoose": "^4.7.8",
     "nodemon": "*",
-    "passport": "^0.3.2",
-    "passport-local": "^1.0.0",
     "react": "15.4.2",
     "react-apollo": "^0.9.0",
     "react-dom": "15.4.2",
