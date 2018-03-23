@@ -14,8 +14,6 @@ a user to it.
 
 After that, here are the steps to set up:
 
-mongo.user and mongo.password located in ```server/server.js```.
-
 1. Clone this repository to your computer
 2. Navigate to StaffQL from your command line
 3. Run ```npm install```
