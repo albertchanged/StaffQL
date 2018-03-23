@@ -7,7 +7,6 @@ import query from '../queries/fetchStaff';
 
 class AddNewStaff extends Component {
   addStaff(name, role, department) {
-    console.log(name, role, department);
     this.props.mutate({
       variables: {
         title: name,
