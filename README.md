@@ -1,6 +1,12 @@
 # StaffQL
 A staff directory powered by GraphQL, MongoDB, React JS, and React Router!
 
+## Click Below to Watch a Demo! ##
+https://youtu.be/tSBZeTlK-XE
+<a href="https://youtu.be/tSBZeTlK-XE
+" target="_blank"><img src="https://i.imgur.com/XqhCLc5.gif" 
+alt="StaffQL Demo" width="50%" border="10" /></a>
+
 ## How It Works ##
 You can:
 1. Add a new staff member
