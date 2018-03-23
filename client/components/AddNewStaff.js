@@ -18,12 +18,13 @@ class AddNewStaff extends Component {
   }
   render() {
     return (
-      <div>
-        <h3>Add New Staff Member</h3>
+      <div className="formContainer">
+        <br />
+        <h4>Add New Staff Member</h4>
         <br />
         <Form addStaff={this.addStaff.bind(this)}/>
       </div>
-    )
+    );
   }
 }
 
@@ -37,6 +38,5 @@ const mutation = gql`
     }
   }
 `;
-
 
 export default graphql(mutation)(AddNewStaff);

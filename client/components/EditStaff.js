@@ -18,8 +18,9 @@ class EditStaff extends Component {
   }
   render() {
     return (
-      <div>
-        <h4 className="editStaffTitle">Edit Staff Information for <span className="headerStaff">{this.props.location.state.name}</span></h4>
+      <div className="formContainer">
+        <br />
+        <h4 className="editStaffTitle">Editing Staff Information for: <br /><span className="headerStaff"><strong>{this.props.location.state.name}</strong></span></h4>
         <br />
         <Form 
           id={this.props.routeParams.id} 
@@ -29,7 +30,7 @@ class EditStaff extends Component {
           editInfo={this.editInfo.bind(this)} 
         />
       </div>
-    )
+    );
   }
 }
 

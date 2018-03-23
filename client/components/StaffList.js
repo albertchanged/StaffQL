@@ -13,9 +13,11 @@ class StaffList extends Component {
     }
   }
   deleteStaff(id) {
-    this.props.mutate({
-      variables: { id }
-    }).then(() => this.props.data.refetch());
+    if (confirm('Remove this staff member?') === true) {
+      this.props.mutate({
+        variables: { id }
+      }).then(() => this.props.data.refetch());
+    }
   }
   renderStaffMembers() {
     if (this.state.text.length === 0) {
@@ -34,15 +36,14 @@ class StaffList extends Component {
     }
   }
   filterStaffMembers() {
-    const filtered = this.props.data.staff.filter(staff => {
+    return this.props.data.staff.filter(staff => {
       if (staff.title.toLowerCase().includes(this.state.text.toLowerCase()) || 
           staff.role.toLowerCase().includes(this.state.text.toLowerCase()) || 
           staff.department.toLowerCase().includes(this.state.text.toLowerCase())
       ) {
         return staff;
       }
-    });
-    return filtered.map((staff) => {
+    }).map((staff) => {
       return (
         <StaffMember 
           key={staff.id} 
@@ -57,17 +58,26 @@ class StaffList extends Component {
   }
   render() {
     if (!this.props.data.staff) {
-      return <div>Fetching staff members</div>;
+      return <div />;
     }
     return (
       <div>
-        <div className="header">
-          <h3 className="headerTitle"><strong><span className="headerStaff">Staff</span>QL</strong></h3>
-          <br />
-          <label className="searchBar">Search by name, role, or department!</label>
-          <input onChange={event => this.setState({ text: event.target.value })} />
+        <div>
+          <h3 className="headerTitle"><strong><span className="headerStaff">Staff</span><strong>QL</strong></strong></h3>
+          <div className="header">
+          <h5 className="searchBar">Search by name, role, or department!</h5>
+          <input 
+            placeholder="Name, Role, or Department"
+            type="text" 
+            className="searchInput" 
+            onChange={event => this.setState({ text: event.target.value })} 
+          />
+          </div>
         </div>
-        <Link to="staff/new"><h5 className="addNewStaff">Add New Staff Member</h5></Link>
+        <h5 className="showingResults">
+          Showing results for:&nbsp;&nbsp;<span className="searchText">{this.state.text}</span>
+        </h5>
+        <Link to="staff/new"><h5 className="addNewStaff"><strong>Add New Staff Member</strong></h5></Link>
         {(this.state.text.length === 0) ? this.renderStaffMembers() : this.filterStaffMembers()}
       </div>
     );

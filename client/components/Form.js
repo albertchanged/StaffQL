@@ -7,7 +7,6 @@ import fetchStaff from '../queries/fetchStaff';
 class Form extends Component {
   constructor(props) {
     super(props);
-    console.log('In Form', this.props.id);
     this.state = {
       role: '',
       department: '',
@@ -32,7 +31,6 @@ class Form extends Component {
   render() {
     return (
       <div>
-        {/* <Link className="cancelButton" to="/">Cancel</Link> */}
         <form onSubmit={this.onSubmit.bind(this)}>
           <h5 className="tealish"><strong>Name</strong></h5>
           <input

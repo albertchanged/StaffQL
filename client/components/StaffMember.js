@@ -12,9 +12,9 @@ class StaffMember extends Component {
     return (
       <div>
         <div className="staffContainer collection-item">
-          <h4>{this.props.title}</h4>
-          <h6><strong>Role:</strong> {this.props.role}</h6>
-          <h6><strong>Department:</strong> {this.props.department}</h6>
+          <h5 className="staffMemberTitle"><strong>{this.props.title}</strong></h5>
+          <h6 className="staffMemberInfo"><strong><span className="staffInfo">Role:</span></strong>&nbsp;&nbsp;{this.props.role}</h6>
+          <h6 className="staffMemberInfo"><strong><span className="staffInfo">Department:</span></strong>&nbsp;&nbsp;{this.props.department}</h6>
         </div>
         <div className="staffButtons">
         <Link 

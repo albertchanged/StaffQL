@@ -1,25 +1,132 @@
-.headerTitle {
-  text-align: center;
-}
-.headerStaff {
-  color: #4A6EBB;
-}
-input {
-  color: #424242;
-}
-.inputStyle {
-  font-size: 20px !important;
-}
-::placeholder {
-  color: #BDBDBD;
-  /* font-size: 20px; */
-}
-.editStaffTitle {
-  margin-top: 3%;
+body {
+  margin: 0;
+  padding: 0;
 }
 .tealish {
   color: #4A6EBB;
   background-color: white;
+}
+.material-icons {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/************************** HEADER *************************/
+
+.header {
+  width: 100%;
+  left: 0;
+  margin: 0 auto 0 auto;
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 1%;
+  margin-bottom: 3%;
+  background-color: #4A6EBB;
+  border-radius: 10px;
+}
+.headerTitle {
+  text-align: center;
+  font-size: 45px;
+}
+.headerStaff {
+  color: #5279CE;
+}
+.searchBar {
+  font-size: 17.5px;
+  color: white;
+  margin-bottom: 2% !important;
+}
+.searchInput {
+  border: 1px solid white !important;
+  border-bottom-color: white !important;
+  background-color: white !important;
+  height: 35px !important;
+  border-radius: 5px !important;
+}
+input {
+  color: #424242;
+  padding-left: 1.5% !important;
+  padding-right: 5% !important;
+  width: 93.5% !important;
+}
+.inputStyle {
+  font-size: 20px !important;
+  padding-left: 0% !important;
+  padding-right: 0% !important;
+  width: 50% !important;
+}
+::placeholder {
+  color: #BDBDBD;
+}
+.showingResults {
+  color: #848484;
+  font-size: 20px;
+  margin-bottom: 2.1%;
+}
+.searchText {
+  color: #01A9DB;
+}
+
+/************************** STAFF LIST *************************/
+
+.addNewStaff {
+  float: right;
+  margin-top: -5%;
+  margin-bottom: 2%;
+  text-decoration: none;
+  color: #4A6EBB;
+}
+.addNewStaff:hover, .addNewStaff:focus {
+  text-decoration: underline;
+}
+.staffMemberTitle {
+  margin-bottom: 3%;
+}
+.staffMemberInfo {
+  font-size: 20px;
+}
+.staffContainer {
+  background-color: #E9E9E9;
+  padding-left: 3%;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  border-radius: 10px;
+  border-bottom: 4px solid #D8D8D8;
+  border-right: 4px solid #D8D8D8;
+}
+.staffInfo {
+  color: #4A6EBB;
+}
+.editInfoButton, .deleteButton {
+  float: right;
+  padding-right: 3%;
+  align-items: center;
+}
+.editInfoButton {
+  margin-top: -135px;
+  margin-left: -25px;
+  font-size: 22.5px;
+}
+.editInfoButton:hover, .editInfoButton:focus {
+  text-decoration: underline;
+  background-color: none;
+}
+.deleteButton {
+  margin-top: -80px;
+  margin-left: -25px;
+  font-size: 35px;
+}
+
+/************************** FORM *************************/
+
+.formContainer {
+  margin-left: 28%;
+  width: 100%;
+}
+.editStaffTitle {
+  margin-top: 1%;
+  line-height: 125%;
 }
 .submitButton {
   border: 2px solid #4A6EBB;
@@ -33,33 +140,7 @@ input {
 .submitButton:hover, .submitButton:focus {
   background-color: #4A6EBB;
 }
-.staffContainer {
-  background-color: #E9E9E9;
-  padding-left: 3%;
-  padding-top: 0.5%;
-  padding-bottom: 2%;
-}
-.editInfoButton, .deleteButton {
-  float: right;
-  padding-right: 3%;
-  align-items: center;
-}
-.editInfoButton {
-  margin-top: -115px;
-  margin-left: -25px;
-  font-size: 25px;
-}
-.editInfoButton:hover, .editInfoButton:focus {
-  text-decoration: underline;
-  background-color: none;
-}
-.deleteButton {
-  margin-top: -80px;
-  margin-left: -25px;
-  font-size: 35px;
-}
 .cancelButton {
-  /* float: right; */
   margin-left: 3%;
   font-size: 20px;
   border: 2px solid #A4A4A4;
@@ -69,21 +150,5 @@ input {
   color: #4A6EBB;
 }
 .cancelButton:hover, .cancelButton:focus {
-  /* text-decoration: underline; */
   background-color: white;
-}
-.searchBar {
-  font-size: 17.5px;
-}
-.material-icons {
-  cursor: pointer;
-  margin-left: 5px;
-}
-.addNewStaff {
-  margin-bottom: 2%;
-  text-decoration: none;
-  color: #4A6EBB;
-}
-.addNewStaff:hover, .addNewStaff:focus {
-  text-decoration: underline;
 }
