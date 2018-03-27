@@ -14,7 +14,7 @@ You can:
 4. Remove a staff member
 
 ## How To Use It ##
-You will need to set up a MongoDB database (mLabs is great!) and assign
+You will need to set up a MongoDB database (mLab is great!) and assign
 a user to it.
 
 After that, here are the steps to set up:
@@ -23,7 +23,7 @@ After that, here are the steps to set up:
 2. Navigate to StaffQL from your command line
 3. Run ```npm install```
 4. Open the project in your favorite code editor
-5. Replace the mongo.user and mongo.password located in ```server/server.js``` with your own mLabs credentials
+5. Replace line 11 of ```server/server/js``` with your own mLab credentials and link
 6. Run ```npm run dev``` in your command line
 7. Navigate to ```localhost:4000``` in your browser
 8. Enjoy!
